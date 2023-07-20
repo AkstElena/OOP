@@ -7,13 +7,13 @@ public class Priest extends BaseHero {
 
     public Priest() {
         super(String.format("Hero_Priest #%d", ++Magician.number),
-                Magician.r.nextInt(100, 200));
-        this.maxElixir = Magician.r.nextInt(50, 150);
+                Magician.r.nextInt(100) + 100);
+        this.maxElixir = Magician.r.nextInt(50) + 100;
         this.elixir = maxElixir;
     }
 
     public int Attack() {
-        int damage = BaseHero.r.nextInt(20, 30);
+        int damage = BaseHero.r.nextInt(20) + 10;
         this.elixir -= (int) (damage * 0.8);
         if (elixir < 0)
             return 0;

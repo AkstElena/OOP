@@ -6,8 +6,8 @@ public class Druid extends BaseHero {
 
     public Druid() {
         super(String.format("Hero_Druid #%d", ++Druid.number),
-                Magician.r.nextInt(100, 200));
-        this.maxHarmony = Magician.r.nextInt(50, 150);
+                Magician.r.nextInt(100) + 100);
+        this.maxHarmony = Magician.r.nextInt(50) + 100;
         this.harmony = maxHarmony;
     }
 
@@ -16,7 +16,7 @@ public class Druid extends BaseHero {
     }
 
     public void healing(BaseHero target) {
-        int heal = BaseHero.r.nextInt(10, 20);
+        int heal = BaseHero.r.nextInt(10) + 10;
         if (this.harmony >= heal) {
             target.healed(heal);
         }

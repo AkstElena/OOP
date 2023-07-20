@@ -1,7 +1,7 @@
 package Lesson_07.Ex007;
 
 import java.util.Random;
- 
+
 public class BaseHero {
     protected static int number;
     protected static Random r;
@@ -23,7 +23,7 @@ public class BaseHero {
 
     public BaseHero() {
         this(String.format("Hero_Priest #%d", ++BaseHero.number),
-                BaseHero.r.nextInt(100, 200));
+                BaseHero.r.nextInt(100) + 100);
     }
 
     public String getInfo() {
@@ -43,7 +43,7 @@ public class BaseHero {
     }
 
     public void Attack(BaseHero target) {
-        int damage = BaseHero.r.nextInt(10, 20);
+        int damage = BaseHero.r.nextInt(10) + 10;
         target.GetDamage(damage);
     }
 }
