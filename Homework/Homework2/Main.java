@@ -8,7 +8,7 @@
 Всё вышеуказанное создать согласно принципам ООП, пройденным на семинаре
  */
 
-package Homework.Homework1;
+package Homework.Homework2;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -21,7 +21,7 @@ public class Main {
     Product beverageProduct1 = new HotBeverage("Espresso", 100, 12, new GregorianCalendar(2023, 7, 20, 0, 0), 0.2,
         80);
     Product beverageProduct2 = new HotBeverage("Latte", 200, 10, new GregorianCalendar(2023, 7, 20, 0, 0), 0.8, 60);
-    Beverage beverageProduct3 = new HotBeverage("Cappuccino", 150, 5, new GregorianCalendar(2023, 7, 20, 0, 0), 0.5,
+    Product beverageProduct3 = new HotBeverage("Cappuccino", 150, 5, new GregorianCalendar(2023, 7, 20, 0, 0), 0.5,
         80);
     HotBeverage beverageProduct4 = new HotBeverage("Glasse", 210, 18, new GregorianCalendar(2023, 7, 20, 0, 0), 0.8,
         50);
