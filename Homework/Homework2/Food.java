@@ -21,4 +21,8 @@ public class Food extends Product {
 
   }
 
+  public void setWeight(double weight) {
+    this.weight = weight;
+  }
+
 }

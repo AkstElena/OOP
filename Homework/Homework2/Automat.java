@@ -22,4 +22,10 @@ public class Automat {
 
   }
 
+  public Order createOrder(List<Product> myList) {
+
+    return null;
+
+  }
+
 }
