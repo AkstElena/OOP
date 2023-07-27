@@ -12,6 +12,6 @@ public interface ActorBehavior {
 
   boolean isTakeOrder(boolean isTake);
 
-  Order makeOrder(List<String> listHuman);
+  Order makeOrder(List<String> listHuman, Automat automat, Human human);
 
 }

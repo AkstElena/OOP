@@ -21,4 +21,25 @@ public abstract class Actor implements ActorBehavior {
     this.name = name;
   }
 
+  public boolean isMakeOrder() {
+    return makeOrder;
+  }
+
+  public void setMakeOrder(boolean makeOrder) {
+    this.makeOrder = makeOrder;
+  }
+
+  public boolean isTakeOrder() {
+    return takeOrder;
+  }
+
+  public void setTakeOrder(boolean takeOrder) {
+    this.takeOrder = takeOrder;
+  }
+
+  @Override
+  public String toString() {
+    return "Actor: name=" + name + ", makeOrder=" + makeOrder + ", takeOrder=" + takeOrder;
+  }
+
 }

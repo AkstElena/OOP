@@ -6,11 +6,19 @@ import java.util.List;
 
 public class Human extends Actor {
 
-  double money;
-  Automat automat;
+  private double money;
+  private Automat automat;
 
   public Human(String name, boolean makeOrder, boolean takeOrder, double money) {
     super(name, makeOrder, takeOrder);
+    this.money = money;
+  }
+
+  public double getMoney() {
+    return money;
+  }
+
+  public void setMoney(double money) {
     this.money = money;
   }
 
@@ -36,29 +44,12 @@ public class Human extends Actor {
 
   }
 
-  public double getMoney() {
-    return money;
-  }
-
-  public void setMoney(double money) {
-    this.money = money;
-  }
-
-  public void setAutomat() {
-    Automat automat = new Automat();
-    automat.initProduct(null);
-    List<Product> myList = new ArrayList<>();
-    Product product1 = new Food("Twix", 80, 10, new GregorianCalendar(2023, 10, 10, 0, 0), 15);
-    Product product2 = new Food("Mars", 90, 50, new GregorianCalendar(2023, 10, 10, 0, 0), 20);
-    Product product3 = new Food("Snicers", 60, 15, new GregorianCalendar(2023, 10, 0, 0, 0), 15);
-    myList.add(product1);
-    myList.add(product2);
-    myList.add(product3);
+  public void setAutomat(Automat automat) {
     this.automat = automat;
   }
 
   @Override
-  public Order makeOrder(List<String> listHuman) {
+  public Order makeOrder(List<String> listHuman, Automat automat, Human human) {
     ArrayList<Product> shoppingList = new ArrayList<>();
     Product shoppingProduct;
     for (String product : listHuman) {
@@ -67,7 +58,13 @@ public class Human extends Actor {
         shoppingList.add(shoppingProduct);
       }
     }
-    setTakeOrder(true);
-    return automat.createOrder(shoppingList);
+    human.setMakeOrder(true);
+    return automat.createOrder(shoppingList, automat, human);
   }
+
+  @Override
+  public String toString() {
+    return super.toString() + " money=" + money + ", automat=" + automat;
+  }
+
 }

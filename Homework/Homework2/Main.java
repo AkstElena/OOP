@@ -38,12 +38,18 @@ public class Main {
     myList.add(beverageProduct5);
     Automat hbAutomat = new HotBeverageAutomat();
     hbAutomat.initProduct(myList);
-
-    String name = "Cappuccino";
-    Double volume = 0.5;
-    Integer temperature = 80;
-
-    System.out.println(((HotBeverageAutomat) hbAutomat).getProduct(name, volume, temperature).toString());
+    Human human = new Human("Alex", false, false, 500);
+    System.out.println(human.toString());
+    System.out.println("----------");
+    human.setAutomat(hbAutomat);
+    System.out.println(human.toString());
+    System.out.println("----------");
+    List<String> listHuman = new ArrayList<>();
+    listHuman.add("Espresso");
+    listHuman.add("Glasse");
+    System.out.println(human.makeOrder(listHuman, hbAutomat, human));
+    System.out.println(human.toString());
+    System.out.println("----------");
 
   }
 }

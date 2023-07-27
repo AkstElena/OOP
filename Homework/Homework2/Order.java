@@ -5,10 +5,17 @@ import java.util.List;
 
 public class Order {
 
-  private ArrayList<Product> productList;
+  private List<Product> productList;
   private Human human;
   private Automat automat;
   private double price;
+
+  public Order(List<Product> productList, Human human, Automat automat, double price) {
+    this.productList = productList;
+    this.human = human;
+    this.automat = automat;
+    this.price = price;
+  }
 
   public double getPrice() {
     return price;
@@ -18,18 +25,11 @@ public class Order {
     this.price = price;
   }
 
-  public Order(ArrayList<Product> productList, Human human, Automat automat, double price) {
-    this.productList = productList;
-    this.human = human;
-    this.automat = automat;
-    this.price = price;
-  }
-
-  public ArrayList<Product> getProductList() {
+  public List<Product> getProductList() {
     return productList;
   }
 
-  public void setProductList(ArrayList<Product> productList) {
+  public void setProductList(List<Product> productList) {
     this.productList = productList;
   }
 
@@ -51,20 +51,21 @@ public class Order {
 
   @Override
   public String toString() {
-    return "Order [productList=" + productList + ", human=" + human + ", automat=" + automat + ", price=" + price + "]";
+    String result = "Order [";
+    for (int index = 0; index < productList.size(); index++) {
+      result += "Product" + (index + 1) + "=" + productList.get(index).getName() + ", ";
+    }
+    return result + "name=" + human.getName() + ", totalPrice=" + price + "]";
+
   }
 
-  // public Order getProductList(List<Product> productList) {
-  // Product shoppingProduct;
+  // public void getProductList(List<Product> productList, Automat automat) {
   // for (Product product : productList) {
-  // shoppingProduct = automat.getProduct(product);
-  // if (shoppingList != null) {
-  // shoppingList.add(shoppingProduct);
+  // if (product.equals(automat.getProduct(product.getName()))) {
+  // System.out.println(product);
   // }
+  // System.out.println("no");
   // }
-  // setTakeOrder(true);
-  // return order;
-
   // }
 
 }

@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Beverage extends Product {
 
-  Double volume;
+  private Double volume;
 
   public Beverage(String name, int price, int quantity, Calendar bestBefore, Double volume) {
     super(name, price, quantity, bestBefore);
@@ -15,14 +15,14 @@ public class Beverage extends Product {
     return volume;
   }
 
+  public void setVolume(Double volume) {
+    this.volume = volume;
+  }
+
   @Override
   public String toString() {
     return super.toString() + ", volume=" + volume;
 
-  }
-
-  public void setVolume(Double volume) {
-    this.volume = volume;
   }
 
 }

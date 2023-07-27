@@ -15,7 +15,7 @@ public class HotBeverageAutomat extends Automat {
 
   public HotBeverage getProduct(String name, Double volume, Integer temperature) {
     for (Product el : listProduct) {
-      if (el instanceof Product & el.getName().equals(name) & ((HotBeverage) el).getTemp().equals(temperature)
+      if (el instanceof Product & el.getName().equals(name) & ((HotBeverage) el).getTemperature().equals(temperature)
           & ((HotBeverage) el).getVolume().equals(volume)) {
         return (HotBeverage) el;
       }
