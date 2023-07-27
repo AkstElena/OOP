@@ -36,11 +36,11 @@ public class Main {
     myList.add(beverageProduct3);
     myList.add(beverageProduct4);
     myList.add(beverageProduct5);
+
     Automat hbAutomat = new HotBeverageAutomat();
     hbAutomat.initProduct(myList);
+
     Human human = new Human("Alex", false, false, 500);
-    System.out.println(human.toString());
-    System.out.println("----------");
     human.setAutomat(hbAutomat);
     System.out.println(human.toString());
     System.out.println("----------");
@@ -48,8 +48,9 @@ public class Main {
     listHuman.add("Espresso");
     listHuman.add("Glasse");
     System.out.println(human.makeOrder(listHuman, hbAutomat, human));
-    System.out.println(human.toString());
+
     System.out.println("----------");
+    System.out.println(human.toString());
 
   }
 }

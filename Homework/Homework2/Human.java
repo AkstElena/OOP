@@ -1,7 +1,6 @@
 package Homework.Homework2;
 
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 import java.util.List;
 
 public class Human extends Actor {
@@ -24,28 +23,34 @@ public class Human extends Actor {
 
   @Override
   public void setMakeOrder(boolean b) {
+    makeOrder = b;
 
   }
 
   @Override
   public void setTakeOrder(boolean b) {
+    takeOrder = b;
 
   }
 
   @Override
-  public boolean isMakeOrder(boolean b) {
-    return false;
+  public boolean isMakeOrder(boolean isMake) {
+    return true;
 
   }
 
   @Override
   public boolean isTakeOrder(boolean b) {
-    return false;
+    return true;
 
   }
 
   public void setAutomat(Automat automat) {
     this.automat = automat;
+  }
+
+  public Automat getAutomat() {
+    return automat;
   }
 
   @Override
@@ -64,7 +69,7 @@ public class Human extends Actor {
 
   @Override
   public String toString() {
-    return super.toString() + " money=" + money + ", automat=" + automat;
+    return super.toString() + " money=" + money;
   }
 
 }

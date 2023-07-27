@@ -3,8 +3,8 @@ package Homework.Homework2;
 public abstract class Actor implements ActorBehavior {
 
   private String name;
-  private boolean makeOrder;
-  private boolean takeOrder;
+  protected boolean makeOrder;
+  protected boolean takeOrder;
 
   public Actor(String name, boolean makeOrder, boolean takeOrder) {
     this.name = name;
@@ -19,22 +19,6 @@ public abstract class Actor implements ActorBehavior {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public boolean isMakeOrder() {
-    return makeOrder;
-  }
-
-  public void setMakeOrder(boolean makeOrder) {
-    this.makeOrder = makeOrder;
-  }
-
-  public boolean isTakeOrder() {
-    return takeOrder;
-  }
-
-  public void setTakeOrder(boolean takeOrder) {
-    this.takeOrder = takeOrder;
   }
 
   @Override

@@ -36,14 +36,14 @@ public class Automat {
     double totalPrice = 0;
     for (Product product : listHuman) {
       shoppingProduct = automat.getProduct(product.getName());
-      if (product.equals(shoppingProduct)
-          && automat.getProduct(product.getName()).getQuantity() > 0) {
+      if (product.equals(shoppingProduct) && automat.getProduct(product.getName()).getQuantity() > 0) {
         shoppingList.add(shoppingProduct);
         totalPrice += automat.getProduct(product.getName()).getPrice();
       }
     }
     human.setTakeOrder(true);
     Order order = new Order(shoppingList, human, automat, totalPrice);
+    human.setMoney(human.getMoney() - totalPrice);
     return order;
   }
 

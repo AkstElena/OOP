@@ -1,6 +1,5 @@
 package Homework.Homework2;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
@@ -58,14 +57,5 @@ public class Order {
     return result + "name=" + human.getName() + ", totalPrice=" + price + "]";
 
   }
-
-  // public void getProductList(List<Product> productList, Automat automat) {
-  // for (Product product : productList) {
-  // if (product.equals(automat.getProduct(product.getName()))) {
-  // System.out.println(product);
-  // }
-  // System.out.println("no");
-  // }
-  // }
 
 }
