@@ -13,14 +13,14 @@ public class Main {
 
         Student student1 = new Student("Ivan", "Ivanov", 1, 5);
         Student student2 = new Student("Boris", "Ivanov", 2, 4);
-        Student student3 = new Student("Kira", "Petrova", 3, 3);
+        Student student3 = new Student("Anna", "Borisova", 3, 3);
 
         ArrayList<Student> groupStudents = new ArrayList<>();
         groupStudents.add(student1);
         groupStudents.add(student2);
         groupStudents.add(student3);
 
-        StudentGroup group1 = new StudentGroup(groupStudents);
+        // StudentGroup group1 = new StudentGroup(groupStudents);
 
         // System.out.print(group1.toString());
         // System.out.println("---------------");
@@ -29,24 +29,24 @@ public class Main {
         // }
         // System.out.println("---------------");
 
-        StudentGroupIterator studentGroupIterator = new StudentGroupIterator(group1);
+        // StudentGroupIterator studentGroupIterator = new StudentGroupIterator(group1);
 
-        while (studentGroupIterator.hasNext()) {
-            Student temp = studentGroupIterator.next();
-            if (temp.getMeanBall() < 4) {
-                studentGroupIterator.remove();
-            }
-        }
+        // while (studentGroupIterator.hasNext()) {
+        // Student temp = studentGroupIterator.next();
+        // if (temp.getMeanBall() < 4) {
+        // studentGroupIterator.remove();
+        // }
+        // }
 
-        System.out.print(group1.toString());
+        System.out.print(groupStudents.toString());
 
-        // Collections.sort(groupStudents);
+        Collections.sort(groupStudents);
         // System.out.print(group1.toString());
 
-        // System.out.println("---------------");
+        System.out.println("---------------");
 
         // groupStudents.sort(new StudentNameComporator());
-        // System.out.print(group1.toString());
+        System.out.print(groupStudents.toString());
 
         // System.out.println("---------------");
 
