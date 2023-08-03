@@ -30,7 +30,7 @@ public class Automat {
 
   }
 
-  public Order createOrder(List<Product> listHuman, Automat automat, Human human) {
+  public Order<Product> createOrder(List<Product> listHuman, Automat automat, Human human) {
     ArrayList<Product> shoppingList = new ArrayList<>();
     Product shoppingProduct;
     double totalPrice = 0;
@@ -45,7 +45,7 @@ public class Automat {
       }
     }
     human.setTakeOrder(true);
-    Order order = new Order(shoppingList, human, automat, totalPrice);
+    Order<Product> order = new Order<Product>(shoppingList, human, automat, totalPrice);
     human.setMoney(human.getMoney() - totalPrice);
     return order;
   }

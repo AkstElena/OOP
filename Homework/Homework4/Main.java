@@ -84,6 +84,26 @@ public class Main {
         "Наличие в Automat после пополнения " + product5.getName() + " на " + product5.getQuantity() + ": "
             + automat.toString());
     System.out.println("----------");
+    System.out.println("----------");
+
+    Human human = new Human("Alex", false, false, 500);
+    human.setAutomat(hbAutomat);
+    System.out.println("Покупатель сделал заказ -> " + human.toString());
+    System.out.println("----------");
+
+    System.out.println("Наличие в автомате до реализации заказа -> " + hbAutomat.toString());
+    System.out.println("----------");
+
+    List<String> listHuman = new ArrayList<>();
+    listHuman.add("Espresso");
+    listHuman.add("Glasse");
+    System.out.println(human.makeOrder(listHuman, hbAutomat, human));
+
+    System.out.println("----------");
+    System.out.println("Покупатель получил заказ -> " + human.toString());
+
+    System.out.println("----------");
+    System.out.println("Наличие в автомате после выдачи заказа -> " + hbAutomat.toString());
 
   }
 }

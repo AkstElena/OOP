@@ -2,14 +2,14 @@ package Homework.Homework4;
 
 import java.util.List;
 
-public class Order {
+public class Order<T extends Product> {
 
-  private List<Product> productList;
+  private List<T> productList;
   private Human human;
   private Automat automat;
   private double price;
 
-  public Order(List<Product> productList, Human human, Automat automat, double price) {
+  public Order(List<T> productList, Human human, Automat automat, double price) {
     this.productList = productList;
     this.human = human;
     this.automat = automat;
@@ -24,11 +24,11 @@ public class Order {
     this.price = price;
   }
 
-  public List<Product> getProductList() {
+  public List<T> getProductList() {
     return productList;
   }
 
-  public void setProductList(List<Product> productList) {
+  public void setProductList(List<T> productList) {
     this.productList = productList;
   }
 
