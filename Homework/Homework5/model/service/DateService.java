@@ -1,4 +1,4 @@
-package Seminar.Seminar5.model.service;
+package Homework.Homework5.model.service;
 
 import java.util.Calendar;
 import java.util.List;

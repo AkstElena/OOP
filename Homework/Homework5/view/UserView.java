@@ -1,4 +1,4 @@
-package Seminar.Seminar5.view;
+package Homework.Homework5.view;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -32,7 +32,7 @@ public class UserView {
       inCommand = scan.nextInt();
       if (inCommand == 1) {
         System.out.println("Имя: ");
-        name = scan.next();
+        name = scan.nextLine();
         System.out.println("Фамилия: ");
         lastName = scan.next();
         System.out.println("День рождения в формате: yyyy/mm/dd: ");
@@ -48,17 +48,17 @@ public class UserView {
         System.out.println(controller.createNewStudent(name, lastName, birthDay, group, speciality, meanBall));
       } else if (inCommand == 2) {
         System.out.println("Имя: ");
-        name = scan.nextLine();
+        name = scan.next();
         System.out.println("Фамилия: ");
-        lastName = scan.nextLine();
+        lastName = scan.next();
         System.out.println("День рождения в формате: yyyy/mm/dd: ");
-        tempDate = scan.nextLine().split("/");
+        tempDate = scan.next().split("/");
         birthDay = new GregorianCalendar(Integer.parseInt(tempDate[0]), Integer.parseInt(tempDate[1]),
             Integer.parseInt(tempDate[2]));
         System.out.println("Дисциплина: ");
-        disciplines = scan.nextLine();
+        disciplines = scan.next();
         System.out.println("Кафедра: ");
-        department = scan.nextLine();
+        department = scan.next();
         System.out.println("Рейтинг: ");
         rating = scan.nextDouble();
         System.out.println(controller.createNewTeacher(name, lastName, birthDay, disciplines, department, rating));

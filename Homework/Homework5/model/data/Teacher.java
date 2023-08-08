@@ -1,4 +1,4 @@
-package Seminar.Seminar5.model.data;
+package Homework.Homework5.model.data;
 
 import java.util.Calendar;
 
